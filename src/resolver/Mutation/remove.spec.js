@@ -1,4 +1,4 @@
-import remove from './remove';
+import { remove } from './remove';
 
 test('returns undefined by default', () => {
     expect(remove()(null, {})).toBeUndefined();

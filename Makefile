@@ -13,10 +13,10 @@ watch: ## continuously compile ES6 files to JS
 	@yarn vite build --watch
 
 test: ## Launch unit tests
-	@NODE_ENV=test NODE_OPTIONS="$$NODE_OPTIONS --experimental-vm-modules" ./node_modules/.bin/jest
+	@NODE_ENV=test NODE_OPTIONS="$$NODE_OPTIONS --experimental-vm-modules" ./node_modules/.bin/jest --config jest.config.cjs
 
 watch-test: ## Launch unit tests and watch for changes
-	@NODE_ENV=test NODE_OPTIONS="$$NODE_OPTIONS --experimental-vm-modules" ./node_modules/.bin/jest --watch
+	@NODE_ENV=test NODE_OPTIONS="$$NODE_OPTIONS --experimental-vm-modules" ./node_modules/.bin/jest --config jest.config.cjs --watch
 
 format: ## Format the source code
 	@./node_modules/.bin/eslint --fix ./src

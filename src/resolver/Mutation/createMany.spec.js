@@ -1,4 +1,4 @@
-import createMany from './createMany';
+import { createMany } from './createMany';
 
 test('returns a new object with id 0 on empty datastore', () => {
     expect(createMany()(null, { data: [{}] })).toEqual([{ id: 0 }]);
